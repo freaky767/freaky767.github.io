@@ -2,9 +2,9 @@
     var CONNECTION_URL = "127.0.0.1:443", // Default Connection
         SKIN_URL = "./skins/"; // Skin Directory
 
-    wHandle.setserver = function(arg) {
-        if (arg != CONNECTION_URL) {
-            CONNECTION_URL = arg;
+   wHandle.setServer = function(arg) {
+        if (WS_URL === arg) return;
+        wsInit(arg);
             showConnecting();
         }
     };
